@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Market Pulse AI — a stock intelligence dashboard with executive summaries, sentiment, opportunity & risk radars, watchlist and a portfolio simulator." />
+    <title>Market Pulse AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%93%88%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-theme="dark">
+    <div id="app">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <span class="brand-mark">📈</span>
+          <span class="brand-text">Market Pulse <b>AI</b></span>
+        </div>
+        <nav class="nav" id="nav" aria-label="Modules"></nav>
+        <div class="sidebar-foot">
+          <span class="data-badge" id="data-badge" title="Active data source">● mock data</span>
+          <span class="sidebar-note">Demo data — not investment advice</span>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <div class="main">
+        <header class="topbar">
+          <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+          <div class="ticker-tape" id="ticker-tape" aria-label="Index tape"></div>
+          <div class="topbar-actions">
+            <div class="search-wrap">
+              <input id="global-search" type="search" placeholder="Search ticker…" autocomplete="off" aria-label="Search ticker" />
+              <div class="search-results" id="search-results" hidden></div>
+            </div>
+            <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark">🌓</button>
+          </div>
+        </header>
+
+        <main class="view" id="view" tabindex="-1"></main>
+
+        <footer class="app-foot">
+          <span>Market Pulse AI · scaffold build</span>
+          <span id="clock-note">Snapshot demo · figures are illustrative</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Data + logic (plain scripts, load order matters; no build step needed) -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/modules/overview.js"></script>
+    <script src="assets/js/modules/summary.js"></script>
+    <script src="assets/js/modules/stocks.js"></script>
+    <script src="assets/js/modules/mag7.js"></script>
+    <script src="assets/js/modules/themes.js"></script>
+    <script src="assets/js/modules/news.js"></script>
+    <script src="assets/js/modules/sentiment.js"></script>
+    <script src="assets/js/modules/opportunity.js"></script>
+    <script src="assets/js/modules/risk.js"></script>
+    <script src="assets/js/modules/relationships.js"></script>
+    <script src="assets/js/modules/watchlist.js"></script>
+    <script src="assets/js/modules/portfolio.js"></script>
+    <script src="assets/js/modules/assistant.js"></script>
+  </body>
+</html>
