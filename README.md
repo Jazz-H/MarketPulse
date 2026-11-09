@@ -55,6 +55,10 @@ python3 -m http.server 8000
 Any static host works too — GitHub Pages, Netlify, Vercel, S3. There is no build
 step and no server-side code.
 
+**Live:** https://jazz-h.github.io/MarketPulse/ — deployed by GitHub Pages straight from
+`main` (Settings → Pages → Deploy from a branch → `main` / root). `.nojekyll` tells
+Pages to serve the files as-is.
+
 ---
 
 ## Project structure
